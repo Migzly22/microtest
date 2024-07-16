@@ -1,0 +1,78 @@
+    /* SCROLLBAR STYLING */
+      /* width */
+      ::-webkit-scrollbar {
+        width: 0.25em;
+        height: 0.25em;
+      }
+      /* Track */
+      ::-webkit-scrollbar-track {
+        background: #2c3643;
+      }
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: #0d9e59;
+        transition: background 0.5s;
+      }
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #00e075;
+      }
+
+      html,
+      body {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background-color: #000;
+        color: black;
+      }
+
+      a:link,
+      a:visited {
+        color: #bdc3c7;
+      }
+
+      .fullwrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: black;
+      }
+
+      #container {
+        width: 100%;
+        height: 100%;
+      }
+
+      #tmp {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 3em;
+        background-color: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(5px);
+        display: none;
+      }
+
+      #tmpcontent{
+        width: 100%;
+          height: 100%;
+          overflow: hidden;
+          overflow-y: auto;
+          box-sizing: border-box;
+          position: relative;
+      }
+
+      .loadingScreen{
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        color: white;
+        font-size: 30px;
+        padding: 50px;
+      }
