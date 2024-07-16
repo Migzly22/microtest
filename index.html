@@ -58,7 +58,7 @@
       /*panoramas*/
 
       var testpanorama = new PANOLENS.ImagePanorama(
-        "panoramas/testpanorama.jpg"
+        "./panoramas/testpanorama.jpg"
       );
       testpanorama.addEventListener("progress", onProgress);
       testpanorama.addEventListener("load", function (e) {
@@ -90,7 +90,7 @@
       testpanorama.add(infospottestpanorama1);
 
       infospottestpanorama1.addEventListener("click", function () {
-        showMedia(1, "images/panorama3.jpg");
+        showMedia(1, "./images/panorama3.jpg");
       });
 
       viewer.add(testpanorama);
