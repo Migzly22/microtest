@@ -6,13 +6,6 @@
     <link rel="stylesheet" type="text/css" href="./css/font-awesome.css" />
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
 
-    <script>
-      if (typeof module === "object") {
-        window.module = module;
-        module = undefined;
-      }
-    </script>
-
     <script src="./imagedata.js"></script>
     <script src="./node_modules/jquery/dist/jquery.js"></script>
     <script src="./node_modules/three/build/three.min.js"></script>
@@ -46,10 +39,8 @@
     </div>
 
     <script>
-      // Required by some npm packages
       window.process = { browser: true, env: { ENVIRONMENT: "BROWSER" } };
-    </script>
-    <script>
+
       var container = document.querySelector("#container");
       /*panolens*/
 
@@ -88,6 +79,18 @@
 
       infospottestpanorama0.addEventListener("click", function () {
         ChangePanorama("panorama1");
+      });
+
+      var infospottestpanorama1 = new PANOLENS.Infospot(
+        512,
+        hotspotIcons[0].data,
+        true
+      );
+      infospottestpanorama1.position.set(4954.17, 506.86, -321.72);
+      testpanorama.add(infospottestpanorama1);
+
+      infospottestpanorama1.addEventListener("click", function () {
+        showMedia(1, "images/panorama3.jpg");
       });
 
       viewer.add(testpanorama);
@@ -232,13 +235,13 @@
         currentPanorama = panorama;
         HideInfospots();
         $("#loading").fadeIn();
-        // $(".customhotspot").fadeOut();
+        $(".customhotspot").fadeOut();
         setTimeout(function () {
           viewer.setPanorama(window[panorama]);
         }, 100);
-        // setTimeout(function () {
-        //   $("#" + panorama).fadeIn();
-        // }, 1000);
+        setTimeout(function () {
+          $("#" + panorama).fadeIn();
+        }, 1000);
       }
 
       function HideInfospots() {
@@ -247,4 +250,3 @@
     </script>
   </body>
 </html>
-
