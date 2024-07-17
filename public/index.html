@@ -3,26 +3,26 @@
   <head>
     <title>testingv2</title>
 
-    <link rel="stylesheet" type="text/css" href="./css/font-awesome.css" />
-    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <link rel="stylesheet" type="text/css" href="./public/css/font-awesome.css" />
+    <link rel="stylesheet" type="text/css" href="./public/css/style.css" />
 
-    <script src="./imagedata.js"></script>
-    <!-- <script src="./node_modules/jquery/dist/jquery.js"></script> -->
+    <script src="./public/imagedata.js"></script>
+    <!-- <script src="./public/node_modules/jquery/dist/jquery.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     
 
-    <!-- <script src="./node_modules/three/build/three.min.js"></script> -->
+    <!-- <script src="./public/node_modules/three/build/three.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/three@0.105.2/build/three.min.js"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/three@0.166.1/build/three.module.min.js"></script> -->
     
-    <!-- <script src="./node_modules/panolens/build/panolens.min.js"></script> -->
+    <!-- <script src="./public/node_modules/panolens/build/panolens.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/panolens@0.12.1/build/panolens.min.js"></script>
 
     <script>
       if (window.module) module = window.module;
     </script>
 
-    <link rel="stylesheet" href="./css/mainstyle.css" />
+    <link rel="stylesheet" href="./public/css/mainstyle.css" />
   </head>
   <body id="body">
     <div id="container" style="color: black"></div>
@@ -65,7 +65,7 @@
       /*panoramas*/
 
       var testpanorama = new PANOLENS.ImagePanorama(
-        "./panoramas/testpanorama.jpg"
+        "./public/panoramas/testpanorama.jpg"
       );
       testpanorama.addEventListener("progress", onProgress);
       testpanorama.addEventListener("load", function (e) {
@@ -97,12 +97,12 @@
       testpanorama.add(infospottestpanorama1);
 
       infospottestpanorama1.addEventListener("click", function () {
-        showMedia(1, "./images/panorama3.jpg");
+        showMedia(1, "./public/images/panorama3.jpg");
       });
 
       viewer.add(testpanorama);
 
-      var panorama1 = new PANOLENS.ImagePanorama("panoramas/panorama1.jpg");
+      var panorama1 = new PANOLENS.ImagePanorama("./public/panoramas/panorama1.jpg");
       panorama1.addEventListener("progress", onProgress);
       panorama1.addEventListener("load", function (e) {
         endLoading();
