@@ -7,8 +7,7 @@ const app = express();
 const PORT = process.env.PORT || 3465;
 
 // Serve static files from the current directory
-// app.use(express.static(__dirname, 'public'));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(__dirname));
 
 // Serve the index.html file on the root path
 app.get('/', (req, res) => {
