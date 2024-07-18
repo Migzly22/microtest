@@ -10,6 +10,14 @@
         {
             "src": "/(.*)",
             "dest": "app.js"
+        },
+        {
+            "src": "/public/css/(.*)",
+            "dest": "/public/css/$1"
+        },
+        {
+            "src": "/public/font/(.*)",
+            "dest": "/public/font/$1"
         }
     ]
 }
