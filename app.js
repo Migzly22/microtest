@@ -4,10 +4,10 @@ import path from 'path';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const app = express();
-const PORT = process.env.PORT || 3465;
+const PORT = process.env.PORT || 3000;
 
 // Serve static files from the current directory
-app.use(express.static(__dirname));
+app.use(express.static(__dirname+ '/public'));
 
 // Serve the index.html file on the root path
 app.get('/', (req, res) => {
